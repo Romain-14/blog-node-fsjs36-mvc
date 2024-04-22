@@ -19,10 +19,13 @@ class Stories {
         return story;
     }
 
+    // méthode statique pour ajouter une story à la liste des stories
     static add(story){
+        // on récupère toutes les stories
         const stories = this.getAll();
+        // on ajoute la nouvelle story à la liste
         stories.push(story);
-
+        // on réécrit le fichier stories.json avec la nouvelle liste
         jsonfile.writeFileSync(file, stories, { spaces: 4, EOL: "\r\n"});
     }
 
