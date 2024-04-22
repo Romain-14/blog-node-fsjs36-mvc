@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style/index.css" />
+		<title><%= title %></title>
+	</head>
+	<body>
+		<header>
+			<h1>Gestion du blog</h1>
+			<nav>
+				<a href="/">Accueil</a>
+				<a href="/admin" class="active">Admin</a>
+			</nav>
+		</header>
+		
+			<main>
+				<form action="/story/add" method="post">
+                    <input type="text" name="title" placeholder="Titre de l'article" required>
+                    <textarea name="content" placeholder="Description de l'article" required></textarea>
+                    <input type="datetime-local" name="publishTime" required>
+					
+                    <input type="text" name="author" placeholder="Auteur de l'article" required>
+                    <input type="text" name="img_src" value="kebab-paysage.webp" required>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+			</main>
+
+		<footer>
+			<p>© 2024 - Romain Fournier - My blog </p>
+			<p>Photo de <a href="https://unsplash.com/fr/@illiyapresents?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Illiya Vjestica</a> sur <a href="https://unsplash.com/fr/photos/troupeau-de-moutons-sur-un-champ-dherbe-verte-pendant-la-journee-W5FdAcHp7l8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+			</p>
+		</footer>
+	</body>
+</html>
