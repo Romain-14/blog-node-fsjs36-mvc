@@ -19,6 +19,12 @@ class Stories {
         return story;
     }
 
+    static add(story){
+        const stories = this.getAll();
+        stories.push(story);
+
+        jsonfile.writeFileSync(file, stories, { spaces: 4, EOL: "\r\n"});
+    }
 
 }
 
